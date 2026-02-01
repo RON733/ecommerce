@@ -212,7 +212,7 @@
 
                     // Provide feedback in the current tab
                     alert("Admin login successful! Dashboard opened in a new tab.");
-                    window.location.href = '../main.html'; // Also go to home in current tab
+                    window.location.href = '../index.html'; // Also go to home in current tab
                 } else {
                     alert("Invalid Admin credentials!");
                 }
@@ -226,7 +226,7 @@
                 name: identifier.split('@')[0]
             };
             localStorage.setItem('gshot-user', JSON.stringify(user));
-            window.location.href = '../main.html';
+            window.location.href = '../index.html';
         });
     </script>
 </body>
