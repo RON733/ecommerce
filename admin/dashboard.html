@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | G'SHOT TEAS</title>
+    <link rel="stylesheet" href="../home/home.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar/Nav -->
+        <header class="admin-header">
+            <div class="brand">
+                <img src="../pic/logo.png" alt="Logo">
+                <span class="brand-name">G'SHOT <span class="highlight">ADMIN</span></span>
+            </div>
+            <nav class="admin-nav">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="inventory.html">Inventory</a>
+                <a href="../main.html">View Store</a>
+                <a href="#">Reports</a>
+            </nav>
+            <div class="admin-profile">
+                <div class="icon-btn">🔔<span class="dot"></span></div>
+                <div class="icon-btn">⚙️</div>
+                <div class="user-avatar">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=fdd835&color=000" alt="Admin">
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <div class="breadcrumb">HOME > BUSINESS DASHBOARD</div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>Total Profits</span>
+                        <div class="stat-icon">💵</div>
+                    </div>
+                    <div class="stat-value">₱42,500.00</div>
+                    <div class="stat-change positive">↗ 12.5% <span>vs last month</span></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>Best Seller</span>
+                        <div class="stat-icon">⭐</div>
+                    </div>
+                    <div class="stat-value">Double Smash</div>
+                    <div class="stat-tag top-rated">TOP RATED <span>842 orders</span></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>Pending Orders</span>
+                        <div class="stat-icon">🕒</div>
+                    </div>
+                    <div class="stat-value">14</div>
+                    <div class="stat-tag action-required">! Action Required</div>
+                </div>
+            </div>
+
+            <div class="main-grid">
+                <!-- Chart Area -->
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3>Sales Trends</h3>
+                        <div class="chart-tabs">
+                            <span class="active">Week</span>
+                            <span>Month</span>
+                        </div>
+                    </div>
+                    <canvas id="salesChart"></canvas>
+                </div>
+
+                <!-- AI Consultant Sidebar -->
+                <aside class="ai-consultant">
+                    <div class="ai-header">
+                        <div class="ai-icon">🤖</div>
+                        <div class="ai-title">
+                            <h4>AI Consultant</h4>
+                            <span class="status-dot"></span> ACTIVE INSIGHT
+                        </div>
+                    </div>
+                    <div class="ai-bubble">
+                        <p>Good morning! I've analyzed your performance trends. <span class="highlight">Based on last
+                                week, consider a promotion on Milk Teas.</span></p>
+                        <small>"Milk tea sales dipped 14% while Burgers rose. A bundle deal could bridge the
+                            gap."</small>
+                    </div>
+                    <div class="ai-actions">
+                        <button class="ai-btn">Run Milk Tea Promo Draft</button>
+                        <button class="ai-btn transparent">See Detailed Report</button>
+                    </div>
+                    <div class="market-trends">
+                        <h5>MARKET TRENDS</h5>
+                        <div class="trend-item">
+                            <span>Local Demand</span>
+                            <span class="val positive">+5.2%</span>
+                        </div>
+                        <div class="trend-bar">
+                            <div class="fill" style="width: 85%;"></div>
+                        </div>
+                        <div class="trend-item">
+                            <span>Competitor Avg</span>
+                            <span class="val negative">-1.4%</span>
+                        </div>
+                        <div class="trend-bar">
+                            <div class="fill red" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                    <div class="ai-chat">
+                        <input type="text" placeholder="Ask AI Consultant...">
+                        <button class="send-btn">➤</button>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Live Orders -->
+            <div class="orders-section">
+                <div class="orders-header">
+                    <h3>Live Orders</h3>
+                    <span class="order-count">6 New Orders</span>
+                </div>
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>ORDER ID</th>
+                            <th>CUSTOMER</th>
+                            <th>ITEMS</th>
+                            <th>PRICE</th>
+                            <th>STATUS</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#GS-8891</td>
+                            <td>
+                                <div class="user-cell">
+                                    <div class="avatar">JD</div> John Doe
+                                </div>
+                            </td>
+                            <td>2x Double Smash Burger</td>
+                            <td>₱570.00</td>
+                            <td><span class="badge pending">PENDING</span></td>
+                            <td>
+                                <button class="btn-approve">APPROVE PAYMENT</button>
+                                <button class="btn-mark">MARK DONE</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#GS-8892</td>
+                            <td>
+                                <div class="user-cell">
+                                    <div class="avatar blue">SC</div> Sarah Connor
+                                </div>
+                            </td>
+                            <td>1x Matcha Zen, 1x Pizza</td>
+                            <td>₱595.00</td>
+                            <td><span class="badge prep">IN PREP</span></td>
+                            <td>
+                                <button class="btn-approve disabled">APPROVE PAYMENT</button>
+                                <button class="btn-mark">MARK DONE</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/auth-guard.js"></script>
+    <script>
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
+                datasets: [{
+                    label: 'Sales',
+                    data: [12, 19, 10, 15, 8, 25, 20],
+                    borderColor: '#fdd835',
+                    backgroundColor: 'rgba(253, 216, 53, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    borderWidth: 3,
+                    pointRadius: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { display: false },
+                    x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.4)' } }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

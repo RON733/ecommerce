@@ -1,0 +1,510 @@
+/* admin.css - specialized styles for the dashboard */
+
+.admin-container {
+    padding: 0;
+    min-height: 100vh;
+    background: #050505;
+    font-family: 'Outfit', sans-serif;
+}
+
+.admin-header {
+    background: #0d0d0d;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.brand img {
+    height: 35px;
+}
+
+.brand-name {
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.brand-name .highlight {
+    color: var(--primary-yellow);
+}
+
+.admin-nav {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.admin-nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.admin-nav a.active {
+    color: var(--primary-yellow);
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icon-btn {
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-yellow);
+    border-radius: 50%;
+}
+
+.user-avatar img {
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    padding: 2rem 3rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+.stat-icon {
+    background: rgba(253, 216, 53, 0.1);
+    color: var(--primary-yellow);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.stat-change {
+    font-size: 0.85rem;
+}
+
+.stat-change.positive {
+    color: #4caf50;
+}
+
+.stat-change span {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.stat-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.stat-tag.top-rated {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+}
+
+.stat-tag.action-required {
+    background: rgba(253, 216, 53, 0.1);
+    color: var(--primary-yellow);
+}
+
+/* Main Grid */
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.chart-container {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    height: 400px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.chart-tabs {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem;
+    border-radius: 8px;
+}
+
+.chart-tabs span {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.chart-tabs span.active {
+    background: var(--primary-yellow);
+    color: #000;
+    font-weight: 700;
+}
+
+/* AI Consultant */
+.ai-consultant {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ai-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.ai-icon {
+    font-size: 1.5rem;
+    background: #000;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.ai-title h4 {
+    font-size: 1rem;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #4caf50;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.ai-title span {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.ai-bubble {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.ai-bubble p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.ai-bubble .highlight {
+    color: var(--primary-yellow);
+    font-weight: 700;
+}
+
+.ai-bubble small {
+    display: block;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.ai-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.ai-btn {
+    padding: 0.8rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.ai-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.market-trends h5 {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 1rem;
+}
+
+.trend-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.trend-item .positive {
+    color: #4caf50;
+}
+
+.trend-item .negative {
+    color: #e53935;
+}
+
+.trend-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.trend-bar .fill {
+    height: 100%;
+    background: var(--primary-yellow);
+}
+
+.trend-bar .fill.red {
+    background: #e53935;
+}
+
+.ai-chat {
+    margin-top: auto;
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem;
+    border-radius: 12px;
+}
+
+.ai-chat input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.send-btn {
+    background: var(--primary-yellow);
+    border: none;
+    border-radius: 8px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+/* Orders Section */
+.orders-section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.orders-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.order-count {
+    background: rgba(253, 216, 53, 0.1);
+    color: var(--primary-yellow);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders-table th {
+    text-align: left;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.orders-table td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    font-size: 0.9rem;
+}
+
+.user-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    background: var(--primary-yellow);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 0.75rem;
+}
+
+.avatar.blue {
+    background: #2196f3;
+    color: #fff;
+}
+
+.badge {
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.badge.pending {
+    background: rgba(255, 152, 0, 0.1);
+    color: #ff9800;
+}
+
+.badge.prep {
+    background: rgba(33, 150, 243, 0.1);
+    color: #2196f3;
+}
+
+.btn-approve,
+.btn-mark {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-approve {
+    background: var(--primary-yellow);
+    color: #000;
+    margin-right: 0.5rem;
+}
+
+.btn-approve.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.btn-mark {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.btn-mark:hover {
+    background: var(--primary-yellow);
+    color: #000;
+}
+
+/* Inventory Organization */
+.category-section {
+    margin-bottom: 4rem;
+    background: rgba(255, 255, 255, 0.01);
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.category-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(253, 216, 53, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.category-header h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-yellow);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.category-header .icon {
+    margin-right: 1rem;
+}
